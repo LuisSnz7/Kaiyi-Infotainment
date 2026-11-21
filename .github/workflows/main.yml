@@ -16,7 +16,7 @@ jobs:
           gradle-version: '8.7'
       - name: Descomprimir y Compilar APK
         run: |
-          unzip -q "KaiyiLauncher*" -d proyecto || unzip -q "*.zip" -d proyecto
+          unzip -oq "*.zip" -d proyecto
           cd proyecto
           if [ -d "android" ]; then cd android; fi
           gradle assembleDebug
